@@ -1,6 +1,6 @@
 window._c = x => {
 	if (x instanceof HTMLElement) {
-		x.on = (e, o = undefined) => {
+		x.__proto__.on = (e, o = undefined) => {
 			return new Promise(resolve => {
 				x.addEventListener(e, resolve, o);
 			})
